@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Gaurav Vinodrao Vaidya — IIT Jodhpur</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
 
 :root {
-  --sand:    #f2ece0;
-  --cream:   #faf7f2;
-  --ink:     #1c1917;
-  --stone:   #78716c;
-  --rule:    #e2d9cc;
-  --saffron: #d97706;
-  --rust:    #9a3412;
-  --serif:   'Playfair Display', Georgia, serif;
-  --sans:    'Jost', system-ui, sans-serif;
+  --sand:    #eef2f7;
+  --cream:   #f8f9fc;
+  --ink:     #2d3142;
+  --stone:   #6b7280;
+  --rule:    #dce3ef;
+  --saffron: #7c9ec9;
+  --rust:    #a78bba;
+  --serif:   'Roboto', sans-serif;
+  --sans:    'Roboto', sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 18px; }
 body { font-family: var(--sans); background: var(--cream); color: var(--ink); overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 
@@ -52,14 +52,14 @@ nav {
   content: '';
   position: absolute; bottom: -4rem; right: -4rem;
   width: 22rem; height: 22rem;
-  border: 1px solid rgba(217,119,6,0.15);
+  border: 1px solid rgba(124,158,201,0.15);
   border-radius: 50%;
-  box-shadow: 0 0 0 2.5rem rgba(217,119,6,0.07), 0 0 0 5rem rgba(217,119,6,0.04), 0 0 0 7.5rem rgba(217,119,6,0.02);
+  box-shadow: 0 0 0 2.5rem rgba(124,158,201,0.07), 0 0 0 5rem rgba(124,158,201,0.04), 0 0 0 7.5rem rgba(124,158,201,0.02);
   pointer-events: none;
 }
 
 .hero-eyebrow { display: flex; align-items: center; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 3rem; }
-.hero-name { font-family: var(--serif); font-size: clamp(2.6rem, 5vw, 4.5rem); font-weight: 900; line-height: 1.05; color: var(--cream); letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+.hero-name { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 900; line-height: 1.05; color: var(--cream); letter-spacing: -0.02em; margin-bottom: 1.5rem; }
 .hero-name em { display: block; font-weight: 400; font-style: italic; color: var(--saffron); font-size: 0.45em; letter-spacing: 0.01em; margin-bottom: 0.4rem; }
 .hero-divider { width: 4rem; height: 2px; background: var(--saffron); margin: 2rem 0; }
 .hero-position { font-size: 0.88rem; font-weight: 300; letter-spacing: 0.04em; color: rgba(250,247,242,0.55); line-height: 1.7; }
@@ -86,7 +86,7 @@ nav {
 
 .hero-cta-group { display: flex; gap: 1rem; margin-top: 2.5rem; }
 .btn-primary { background: var(--saffron); color: var(--ink); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.8rem 1.75rem; transition: background 0.2s; }
-.btn-primary:hover { background: #b45309; color: var(--cream); }
+.btn-primary:hover { background: #5a82b0; color: var(--cream); }
 .btn-outline { border: 1px solid var(--rule); color: var(--stone); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.8rem 1.75rem; transition: border-color 0.2s, color 0.2s; }
 .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
 
@@ -123,9 +123,9 @@ section { padding: 5.5rem 0; }
 /* TEACHING */
 #teaching { background: var(--ink); }
 #teaching .sec-title { color: var(--cream); }
-.courses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #2a2521; }
-.course-card { background: var(--ink); padding: 2.5rem 2rem; border: 1px solid #2a2521; transition: background 0.2s; }
-.course-card:hover { background: #231f1b; }
+.courses-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #2d3142; }
+.course-card { background: var(--ink); padding: 2.5rem 2rem; border: 1px solid #2d3142; transition: background 0.2s; }
+.course-card:hover { background: #363c57; }
 .course-num { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1.2rem; }
 .course-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: 0.75rem; line-height: 1.3; }
 .course-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.75; color: rgba(250,247,242,0.45); }
@@ -169,25 +169,25 @@ section { padding: 5.5rem 0; }
 .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
 .contact-tagline { font-family: var(--serif); font-size: 1.2rem; font-style: italic; color: rgba(250,247,242,0.6); line-height: 1.6; margin-bottom: 2.5rem; }
 .contact-detail { display: flex; flex-direction: column; margin-bottom: 2rem; }
-.detail-row { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; align-items: baseline; padding: 0.9rem 0; border-bottom: 1px solid #2a2521; }
+.detail-row { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; align-items: baseline; padding: 0.9rem 0; border-bottom: 1px solid #2d3142; }
 .detail-lbl { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--saffron); }
 .detail-val { font-size: 0.88rem; font-weight: 300; color: rgba(250,247,242,0.65); }
 .detail-val a { color: var(--saffron); }
 .soc-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
-.soc-link { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #2e2a27; color: rgba(250,247,242,0.4); padding: 0.35rem 0.85rem; transition: border-color 0.15s, color 0.15s; }
+.soc-link { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border: 1px solid #444c6e; color: rgba(250,247,242,0.4); padding: 0.35rem 0.85rem; transition: border-color 0.15s, color 0.15s; }
 .soc-link:hover { border-color: var(--saffron); color: var(--saffron); }
 .cform { display: flex; flex-direction: column; gap: 1.25rem; }
 .fg { display: flex; flex-direction: column; gap: 0.4rem; }
 .flbl { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250,247,242,0.35); }
-.finput, .ftarea { background: #211d1a; border: 1px solid #2e2a27; color: var(--cream); font-family: var(--sans); font-size: 0.9rem; font-weight: 300; padding: 0.85rem 1rem; outline: none; transition: border-color 0.15s; resize: vertical; }
-.finput::placeholder, .ftarea::placeholder { color: #3a3530; }
+.finput, .ftarea { background: #363c57; border: 1px solid #444c6e; color: var(--cream); font-family: var(--sans); font-size: 0.9rem; font-weight: 300; padding: 0.85rem 1rem; outline: none; transition: border-color 0.15s; resize: vertical; }
+.finput::placeholder, .ftarea::placeholder { color: #444c6e; }
 .finput:focus, .ftarea:focus { border-color: var(--saffron); }
 .ftarea { min-height: 120px; }
 .fsubmit { align-self: flex-start; background: var(--saffron); color: var(--ink); font-family: var(--sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border: none; padding: 0.9rem 2.25rem; cursor: pointer; transition: background 0.2s; }
-.fsubmit:hover { background: #b45309; color: var(--cream); }
+.fsubmit:hover { background: #5a82b0; color: var(--cream); }
 
 /* FOOTER */
-footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+footer { background: #1e2235; border-top: 2px solid var(--saffron); padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; }
 .foot-left { font-family: var(--serif); font-style: italic; font-size: 0.85rem; color: rgba(250,247,242,0.3); }
 .foot-right { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,247,242,0.25); }
 .foot-right a { color: var(--saffron); transition: opacity 0.15s; }
@@ -281,7 +281,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- RESEARCH -->
 <section id="research">
   <div class="wrap">
-    <p class="sec-label"><span class="orn"></span>01 — Research</p>
+    <p class="sec-label"><span class="orn"></span>Research</p>
     <h2 class="sec-title">Research Areas</h2>
     <div class="research-grid">
       <div class="r-card"><div class="r-card-bar"></div><h3 class="r-card-title">Emotional Design</h3><p class="r-card-body">Investigating affective responses to product artefacts and developing frameworks for emotion-led design of products, including smart wearables.</p></div>
@@ -296,7 +296,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- PUBLICATIONS -->
 <section id="publications">
   <div class="wrap">
-    <p class="sec-label"><span class="orn"></span>02 — Publications</p>
+    <p class="sec-label"><span class="orn"></span>Publications</p>
     <h2 class="sec-title">Publications</h2>
 
     <p class="pub-section-title">Journal Articles</p>
@@ -411,7 +411,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- TEACHING -->
 <section id="teaching">
   <div class="wrap">
-    <p class="sec-label"><span class="orn"></span>03 — Teaching</p>
+    <p class="sec-label"><span class="orn"></span>Teaching</p>
     <h2 class="sec-title" style="color:var(--cream)">Courses</h2>
     <div class="courses-grid">
       <div class="course-card"><p class="course-num">C–01</p><p class="course-name">Product Visualisation &amp; Ideation</p><p class="course-desc">Developing visual communication skills — sketching, rendering, and ideation methodologies for product designers at all stages of the creative process.</p></div>
@@ -425,7 +425,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <p class="sec-label"><span class="orn"></span>04 — Experience</p>
+    <p class="sec-label"><span class="orn"></span>Experience</p>
     <h2 class="sec-title">Academic &amp; Industry Experience</h2>
     <div class="exp-grid">
       <div>
@@ -453,7 +453,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- CV -->
 <section id="cv">
   <div class="wrap">
-    <p class="sec-label"><span class="orn"></span>06 — Curriculum Vitae</p>
+    <p class="sec-label"><span class="orn"></span>Curriculum Vitae</p>
     <h2 class="sec-title">Academic Profile</h2>
     <div class="cv-layout">
       <div>
@@ -478,7 +478,7 @@ footer { background: #0d0a08; border-top: 2px solid var(--saffron); padding: 1.5
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap" style="padding-bottom:5.5rem">
-    <p class="sec-label"><span class="orn"></span>07 — Contact</p>
+    <p class="sec-label"><span class="orn"></span>Contact</p>
     <h2 class="sec-title">Get in Touch</h2>
     <div class="contact-wrap">
       <div>
@@ -548,7 +548,7 @@ if (window.matchMedia('(pointer:fine)').matches) {
   glow.style.cssText = `
     position: fixed; pointer-events: none; z-index: 9999;
     width: 320px; height: 320px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(217,119,6,0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(124,158,201,0.07) 0%, transparent 70%);
     transform: translate(-50%, -50%);
     transition: left 0.18s ease, top 0.18s ease;
     top: -999px; left: -999px;
@@ -593,7 +593,7 @@ const navObs = new IntersectionObserver(entries => {
       navLinks.forEach(a => {
         a.style.color = '';
         if (a.getAttribute('href') === '#' + e.target.id) {
-          a.style.color = '#d97706';
+          a.style.color = '#7c9ec9';
         }
       });
     }
