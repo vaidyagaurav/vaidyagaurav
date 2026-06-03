@@ -31,7 +31,7 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 300;
   background: var(--ink);
   display: flex; justify-content: space-between; align-items: center;
-  padding: 0 3rem; height: 52px;
+  padding: 0 3rem; height: 68px;
   border-bottom: 2px solid var(--saffron);
 }
 .nav-brand { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--cream); }
@@ -41,7 +41,7 @@ nav {
 .nav-links a:hover { color: var(--saffron); }
 
 /* HERO */
-#hero { min-height: 100svh; padding-top: 52px; display: grid; grid-template-columns: 55% 45%; }
+#hero { min-height: 100svh; padding-top: 68px; display: grid; grid-template-columns: 55% 45%; }
 
 .hero-left {
   background: var(--ink); padding: 5rem 4rem 4rem;
@@ -227,7 +227,7 @@ footer { background: #1e2235; border-top: 2px solid var(--saffron); padding: 1.5
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand"><strong>Dr. Gaurav Vaidya</strong> — IIT Jodhpur</div>
+  <a href="#about" style="display:flex;align-items:center;"><img src="data:image/png;base64,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" alt="GV" style="height:56px;width:56px;object-fit:contain;"></a>
   <ul class="nav-links">
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
@@ -616,7 +616,7 @@ document.querySelectorAll('.pub-item').forEach(item => {
 
 /* ── 9. SCROLL PROGRESS BAR ── */
 const bar = document.createElement('div');
-bar.style.cssText = 'position:fixed;top:52px;left:0;z-index:199;height:2px;width:0%;background:linear-gradient(to right,#7c9ec9,#a8c8e8);transition:width 0.1s linear;pointer-events:none;';
+bar.style.cssText = 'position:fixed;top:68px;left:0;z-index:199;height:2px;width:0%;background:linear-gradient(to right,#7c9ec9,#a8c8e8);transition:width 0.1s linear;pointer-events:none;';
 document.body.appendChild(bar);
 window.addEventListener('scroll', () => {
   bar.style.width = (window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
