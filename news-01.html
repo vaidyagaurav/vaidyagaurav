@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toy-based Integrated Pedagogy for Mathematics — STEM Teacher Training Program — Dr. Gaurav Vaidya</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sand: #eef2f7; --cream: #f8f9fc; --ink: #2d3142;
+  --stone: #6b7280; --rule: #dce3ef; --saffron: #7c9ec9;
+  --sans: "Roboto", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 18px; scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: var(--ink); display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; height: 52px; border-bottom: 2px solid var(--saffron); }
+.nav-back { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,247,242,0.6); transition: color 0.2s; }
+.nav-back:hover { color: var(--saffron); }
+.nav-logo img { height: 34px; width: 34px; object-fit: contain; }
+.hero { background: var(--ink); padding-top: 52px; min-height: 38vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; bottom: -4rem; right: -4rem; width: 22rem; height: 22rem; border-radius: 50%; border: 1px solid rgba(124,158,201,0.15); box-shadow: 0 0 0 2.5rem rgba(124,158,201,0.07), 0 0 0 5rem rgba(124,158,201,0.04); pointer-events: none; }
+.hero-inner { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; position: relative; z-index: 1; width: 100%; }
+.tag-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; background: var(--saffron); color: var(--ink); padding: 0.2rem 0.6rem; }
+.date { font-size: 0.72rem; color: rgba(250,247,242,0.5); }
+h1 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; color: #f8f9fc; line-height: 1.2; letter-spacing: -0.02em; }
+.page { max-width: 900px; margin: 0 auto; padding: 0 3rem; }
+section { padding: 4rem 0; }
+section + section { border-top: 1px solid var(--rule); }
+.sec-title { font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+.body-text { font-size: 0.95rem; line-height: 1.85; color: var(--stone); font-weight: 300; }
+.body-text p + p { margin-top: 1rem; }
+.slider-wrap { position: relative; overflow: hidden; border: 1px solid var(--rule); background: var(--sand); }
+.slider-track { display: flex; transition: transform 0.4s cubic-bezier(0.23,1,0.32,1); }
+.slide { min-width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: var(--sand); flex-shrink: 0; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+.slide-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--stone); font-size: 0.85rem; width: 100%; height: 100%; aspect-ratio: 16/9; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(45,49,66,0.7); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+.slider-btn:hover { background: var(--saffron); }
+.slider-btn.prev { left: 1rem; }
+.slider-btn.next { right: 1rem; }
+.slider-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rule); cursor: pointer; transition: background 0.2s; border: none; }
+.dot.active { background: var(--saffron); }
+.slide-caption { text-align: center; font-size: 0.78rem; color: var(--stone); margin-top: 0.75rem; font-style: italic; min-height: 1.2rem; }
+footer { background: var(--ink); border-top: 2px solid var(--saffron); padding: 1.5rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+.foot-text { font-size: 0.75rem; color: rgba(250,247,242,0.3); }
+.foot-link { font-size: 0.75rem; color: var(--saffron); }
+@media (max-width: 700px) {
+  nav { padding: 0 1.5rem; }
+  .hero-inner, .page { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-back" href="index.html">← Back</a>
+  <div class="nav-logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAK7klEQVR4nO2de6hlVR3Hv+ucex1pRufhK53RyRwoX6FmhdGkYYShRKKG9FQEH0koCKn0h9UfkVCRUP2hqINgaVpBRgUhmoNIYwX5aKanjDqaOc34Gp3HPefTH+u3POvue849j73P4879feCwX2uvtfb+rd9v/dZrH8lxHMdxHMdxHMdxHMdxHMdxHMdxHMdxHMdxHMdxHMeRwrgzUARIecq3pMshBObe5XRiIgQM1CTVFAXY6DF8kNTsJnAgLOZCMTYBm6bWJTVyAQDTkt4l6TBJSyRNSXpL0i5J2yX9N4SwJwtfk6QQQnNkmV9AjEXAQD3XVOAESedIOlfSSklbJP1F0jZJSXDLJC2XdKCk3ZKekfR4CGGrxREkhSTozNQvl7QrhLBv2M+16EnaZvtLgSuAR2hxpwl73jiAtcD5wE3AN4CPZdfrwBSwxI6vBtbZ/kRUSfslwJRta8CVwD8zwf4VOC0LWzNBFX+1NvGuA74C3Ax8pHBtFfAYcKQdu4CrBghA3fZPBx5lNg8BK+36VDshdoqzYBHWArcADwDXATcAfwd2A8vTfcN6zkWJCaJm+1fbywbYY9vHgYPs+lSJNOrZ8ZWFArQ9K0Au4KooCPcWe9lNYK9t/wOstuv1+WPrOb1UDXwUeBVouICHQMEs32XC3WeCnbHjc+36QJo7T9rTtj3P0vmfC7hiMk36gb3kvbZNwr07DzeE9JOQv2XppWrABVyWTLjXFITbtN/rwNG5CR9CHgLREz8Q+ANwVDo/jPQWDZlZ/pBpazLLyUQDfN/CDEV72+TlWuA423cBD0qmNUuI7drcJCft3Q0cO0ztLeQnAMuSyXZKkGnMjQWNzfd/kYd1FgimuQE4HHiF2DxpZgJOmvxpsubMiPLmZrksmWP1zTbamwT9MnCwhfOXvlBIwrK67gUTaKON9rp5HgNVODpJYOdIOlJxeC+PN431PmRb194RUoWAkwAvsv3i7IlUADYVwjuTTmaelxL7lvM6N9/fCazK73FGQ1kNTvefLOkIRe3MBZi09dkQwg5JWszzo8ZBWQEnYZ5i2+KEuTTd5lnJHaxxUFVv0vFdrr9gWzfPI6Zsh0Myt8fYtpMAXy6ZztyEbZJdv/flsy8H7S4d5gzO+Z5rkHSrEvAhXcLtLJnOHKwuL1WfT+JU2yqeK6cqAS/pEm6mZDqtBG0iu3nl75b0hqQ9mr+6aUpaYfl4yu5fIukDdt+rarXfO71cLI5XQghPpnxU8Egx8tZzrZa0TtJrlt9pSQcrzgv/Y79plhVwWlbSTYCV1r1mxpZL+rikyyUdK2mf2gsIxZf0M0n3SdoMNBSffa1iB83ne0z6TkkbzLRX3hqw53qHpDMk3ago2Ncs3Qc1exnP8KE15+qhQrdkIvVJf83CVT7IABwDbKM9qcv0O13iOAvYYeEbhThmrD3/pyz80J1F4HvAv4Fjy8RTVTNph207la5lJdOZA3FUakkI4VlJt9vpfWr1pqU2+ZuSbrbw04U46sABIYSHJV2hziY6dejUiKsyhqZFwLQpzk5JF4cQnrFzAzUxqxLwti7hujlh/SccX3LDtCl56SH7pePdkmYs/EwhjkYIYa8J7T5JTyt2rebOVzo+TbHObg6rPW/18D5F07wnhLDJ8ravl0V57aiqHfy3LtePtG3lJd8EN5/p76U5la7fYduid52OLxtyT1ySx3pJT1VRFZQVcHrYJzrEl47XSFFjSqbXLR+DXk8C/ImiVz5VuCdp7IXAqhBCY0j1cNPiPVHSxhBCT8tp56OsgNOLeUKxHi7WYeklHMMELx8JITTNFL4o6QE7nb/YYMcrFUfNpJbQKwGomXU4UdKOEMLrVVQFpQRs7bZ6COFVSY8pCjc3b8mtXyXpuOzcJHOrbTu9m8tsW7U1Su9lvaSNtl+6I6aKOjhl7OdqL7z0It5fYZqVk5ndjYrOVk3tna3TgdNT4a44/RWSDg4hbM40uhRVvOwkwF8q9gh1amqcadtJHi5MC9Pnc7aCWlpciTXKCsp6SU9WGXdpAWdmerukH6tVXxXTOBM4cIgOShXkztYudXa2LgJWhhBmKnqWWc6VVJ1DWpW5xDL4XUl7NVuLk6lbI+nDFm5SzXTubP3KTrdztg6RdIGdK2Wmh+VcJSp50TYqUwsh/EvSbRZv/mKSZnx2IczosELYq7NV1hHKnatHUhZKxvk2VWoS1sX2dcWepdxJSSXyAuBQtUzSxJGZxkckbVZ7ZwtJHwROTVpfJr3MudpivVmVDWNWJmDLVLC6+MuarcVBsZtwhaRLTYsnefpOPYQwoziKI83V0obi85Vytjo4VxNZfb0NndcGp+Us24CDrOO+lBZnaV1raRRXVDRtlKivGZ20RsmOAnZlceVxQ1ytMXAHDq0Fcjdga5irZhilpWEl8xpJv1Mci01jtU1JR0m63jR+mFqcRpNq6nPCQeZsvaDobBVbBun4UEnn27m+nqXgXO2s2rkaKlnJXEbrO1jp2xwzxGWkJ1rYgR9qHg3OF799bpB0iEOJATg7izMnjX0/auH7UhZaqzGvAt47SBxjJTNzy4AHMwEkIfyZuJa4NuiDdRBwin8PcGGelwHiD8RPO6X1zkUhJ9N9Sj/p0FowsAK4vkweuzG0EmNmrhZCeENxWsxtih0HU4pzqE6VdEdyzip4wKai2ZyStFXS2SGE+4GpEl5pL85WkHSpHff6DPmwYKU9VyMnmWvb/yLwUsGc/jAL29eUHuZ+DwTgbuDwQeJrE3+yQquJzlbSWgr7L9HH0lhG4FyNFGZ/VmkNcCst7xrgnvxBzSzW6eJpZwK+DngaOC+7VonDkuX73kLBTKS6+At5nuaJLxWak4DLq8zr2MkfBDgZ+BFxTTHE71ldQh/f08gswyHAAbZfuvlVzDO9OVsbU/rd4rPtVcDx+XPsF+TabMeHAhcDPwWeAzYB3yZ+TfYM4LB0Xw9xD22uFN2drQbwPgvfTchDd64SI3fL0zQUWjMUt4cQ7gkhfEZxCcyXFCcPLJX0HsVZFPNiAghDnBKUnK0NdtypZ+sSO277XhnisODEkmnHxNZDWb25hvbOVtLoF4FlFnaO4BiDczX2hrVp9EwaJ06anf3GXsKznq3nJf3GThfHvBuS3inpU3ZuVoFlyMOCTkkyZ+sT8zhbTeBhC18r3m/bhdlztRgwAU8DW+ZxtmaAkyx8UYtz52oklslLUH/UbeXBBjtu52zVFR1FqbXkZeENCy5GMmfraOBN5g4jJo3eBiy1sIEx9lx5KeqDzNl6TtKv1X6CYUNxSDT1qk2Pc1jQBTwA9DZn6/IU3LbrJf2+cM6ZRLK2ezdn6wQLv5IR9VwVcQ0ejF56tupqzdk6S4ul52p/oI2zlbS26Gw9T/xbga9iw4mjxjV4ANo4W9JcZwtJqyXdJGlrCOG1UTpXTkmynqlOPVupCfUKcISFdfO8UMjatp16ttIfktxr4ceivW6iByRN3reerbvsdO5spT+xvr14r7NAyJyttcBbmVlOmrzFNHxsptk1uASZs7VV0m/V6tlKmrzBNNydq4WKdXgE4JOmtWnY8E3gaAvjirRQyZytA4B/ZE7W/XZ9rNrrJaskmbO1V62eLUm61ZtF+wmFnq0G8Z/HpyZBwCP7B7L9mbxnC3hM0qP2/Y4pVfgpZWeM0Pp7v5Mz52rsGuw4Tj9Q8dIZx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3Ecx3FGxP8BeyHJlYgHHaoAAAAASUVORK5CYII=" alt="GV"></div>
+</nav>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="tag-row">
+      <span class="tag">Outreach</span>
+      <span class="date">December 2025</span>
+    </div>
+    <h1>Toy-based Integrated Pedagogy for Mathematics — STEM Teacher Training Program</h1>
+  </div>
+</div>
+<section>
+  <div class="page">
+    <h2 class="sec-title">About the Event</h2>
+    <div class="body-text"><p>I had the opportunity to conduct a session on Toy-based Integrated Pedagogy for Mathematics as part of the STEM Teacher Training Program for PM SHRI Jawahar Navodaya Vidyalaya, organised by IIT Jodhpur and the Navodaya Leadership Institute, Udaipur.</p>
+     <p>The session brought together 50 teachers from Delhi, Rajasthan, and Haryana, exploring how play-based and toy-driven approaches can make mathematical concepts more intuitive and engaging for school students.</p></div>
+  </div>
+</section>
+<section style="background:var(--sand);">
+  <div class="page">
+    <h2 class="sec-title">Gallery</h2>
+    <div class="slider-wrap">
+      <div class="slider-track" id="track-news-01"><div class="slide"><div class="slide-placeholder">Photo 1 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 2 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 3 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 4 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 5 — Add image</div></div></div>
+      <button class="slider-btn prev" onclick="slide('news-01',-1)">&#8592;</button>
+      <button class="slider-btn next" onclick="slide('news-01',1)">&#8594;</button>
+    </div>
+    <div class="slider-dots" id="dots-news-01"><button class="dot active" onclick="goTo('news-01',0)"></button><button class="dot" onclick="goTo('news-01',1)"></button><button class="dot" onclick="goTo('news-01',2)"></button><button class="dot" onclick="goTo('news-01',3)"></button><button class="dot" onclick="goTo('news-01',4)"></button></div>
+    <p class="slide-caption" id="caption-news-01">Image 1 of 5</p>
+  </div>
+</section>
+<footer>
+  <span class="foot-text">Dr. Gaurav Vinodrao Vaidya · IIT Jodhpur</span>
+  <a class="foot-link" href="index.html">← Back</a>
+</footer>
+<script>
+const sliders = {};
+function initSlider(id) { sliders[id] = { current: 0, total: document.querySelectorAll('#track-' + id + ' .slide').length }; }
+function updateSlider(id) {
+  const s = sliders[id];
+  document.getElementById('track-' + id).style.transform = 'translateX(-' + (s.current * 100) + '%)';
+  document.querySelectorAll('#dots-' + id + ' .dot').forEach((d,i) => d.classList.toggle('active', i === s.current));
+  document.getElementById('caption-' + id).textContent = 'Image ' + (s.current+1) + ' of ' + s.total;
+}
+function slide(id, dir) { const s = sliders[id]; s.current = (s.current + dir + s.total) % s.total; updateSlider(id); }
+function goTo(id, idx) { sliders[id].current = idx; updateSlider(id); }
+initSlider('news-01');
+document.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') slide('news-01',-1); if (e.key === 'ArrowRight') slide('news-01',1); });
+let tx = 0;
+document.getElementById('track-news-01').addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
+document.getElementById('track-news-01').addEventListener('touchend', e => { const d = tx - e.changedTouches[0].clientX; if (Math.abs(d) > 50) slide('news-01', d > 0 ? 1 : -1); });
+</script>
+</body>
+</html>
