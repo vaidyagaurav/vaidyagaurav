@@ -19,9 +19,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: var(
 .nav-back { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(250,247,242,0.6); transition: color 0.2s; }
 .nav-back:hover { color: var(--saffron); }
 .nav-logo img { height: 34px; width: 34px; object-fit: contain; }
-.hero { background: var(--ink); padding-top: 52px; min-height: 38vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+.hero { background: var(--ink); padding-top: 52px; display: flex; flex-direction: column; position: relative; overflow: hidden; }
 .hero::after { content: ""; position: absolute; bottom: -4rem; right: -4rem; width: 22rem; height: 22rem; border-radius: 50%; border: 1px solid rgba(124,158,201,0.15); box-shadow: 0 0 0 2.5rem rgba(124,158,201,0.07), 0 0 0 5rem rgba(124,158,201,0.04); pointer-events: none; }
-.hero-inner { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; position: relative; z-index: 1; width: 100%; }
+.hero-inner { max-width: 900px; margin: 0 auto; padding: 4rem 3rem 3rem; position: relative; z-index: 1; width: 100%; }
 .tag-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .tag { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; background: var(--saffron); color: var(--ink); padding: 0.2rem 0.6rem; }
 .date { font-size: 0.72rem; color: rgba(250,247,242,0.5); }
@@ -32,11 +32,11 @@ section + section { border-top: 1px solid var(--rule); }
 .sec-title { font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
 .body-text { font-size: 0.95rem; line-height: 1.85; color: var(--stone); font-weight: 300; }
 .body-text p + p { margin-top: 1rem; }
-.slider-wrap { position: relative; overflow: hidden; border: 1px solid var(--rule); background: var(--sand); }
-.slider-track { display: flex; transition: transform 0.4s cubic-bezier(0.23,1,0.32,1); }
-.slide { min-width: 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: var(--sand); flex-shrink: 0; }
-.slide img { width: 100%; height: 100%; object-fit: cover; }
-.slide-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--stone); font-size: 0.85rem; width: 100%; height: 100%; aspect-ratio: 16/9; }
+.slider-wrap { position: relative; overflow: hidden; border: 1px solid var(--rule); background: var(--ink); }
+.slider-track { display: flex; transition: transform 0.4s cubic-bezier(0.23,1,0.32,1); width: 100%; }
+.slide { min-width: 0; width: 100%; flex: 0 0 100%; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: var(--ink); overflow: hidden; }
+.slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slide-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--stone); font-size: 0.85rem; width: 100%; aspect-ratio: 16/9; min-height: 300px; }
 .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(45,49,66,0.7); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 10; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
 .slider-btn:hover { background: var(--saffron); }
 .slider-btn.prev { left: 1rem; }
@@ -66,28 +66,20 @@ footer { background: var(--ink); border-top: 2px solid var(--saffron); padding: 
       <span class="date">November 2025</span>
     </div>
     <h1>नवसृजन — Design Innovation Workshop at IIT Jodhpur</h1>
+    <div style="margin-top:2rem;position:relative;">
+      <div class="slider-wrap">
+        <div class="slider-track" id="track-news-02"><div class="slide"><div class="slide-placeholder">Photo 1 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 2 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 3 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 4 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 5 — Add image</div></div></div>
+        <button class="slider-btn prev" onclick="slide('news-02',-1)">&#8592;</button>
+        <button class="slider-btn next" onclick="slide('news-02',1)">&#8594;</button>
+      </div>
+      <div class="slider-dots" id="dots-news-02"><button class="dot active" onclick="goTo('news-02',0)"></button><button class="dot" onclick="goTo('news-02',1)"></button><button class="dot" onclick="goTo('news-02',2)"></button><button class="dot" onclick="goTo('news-02',3)"></button><button class="dot" onclick="goTo('news-02',4)"></button></div>
+      <p class="slide-caption" id="caption-news-02">Image 1 of 5</p>
+    </div>
+    <div style="margin-top:2rem;">
+      <p style="font-size:0.92rem;line-height:1.85;color:rgba(250,247,242,0.65);font-weight:300;margin-top:0;">Was part of नवसृजन — the Design Innovation Workshop at IIT Jodhpur, jointly organised by Jodhpur City Knowledge and Innovation Foundation (JCKIF), National Institute of Fashion Technology (NIFT) Jodhpur, and Footwear Design and Development Institute (FDDI) Jodhpur.</p><p style="font-size:0.92rem;line-height:1.85;color:rgba(250,247,242,0.65);font-weight:300;margin-top:0.75rem;">The workshop brought together 100 artisans — 50 from the textile sector and 50 from the leather craft community — who brought their stories, skills, and passion for craft to the sessions.</p><p style="font-size:0.92rem;line-height:1.85;color:rgba(250,247,242,0.65);font-weight:300;margin-top:0.75rem;">In the session on Market Trends and Consumer Behaviour, we explored how changing consumer preferences, storytelling, and thoughtful presentation can help crafts reach newer markets and broader audiences.</p>
+    </div>
   </div>
 </div>
-<section style="background:var(--sand);">
-  <div class="page">
-    <h2 class="sec-title">Gallery</h2>
-    <div class="slider-wrap">
-      <div class="slider-track" id="track-news-02"><div class="slide"><div class="slide-placeholder">Photo 1 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 2 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 3 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 4 — Add image</div></div><div class="slide"><div class="slide-placeholder">Photo 5 — Add image</div></div></div>
-      <button class="slider-btn prev" onclick="slide('news-02',-1)">&#8592;</button>
-      <button class="slider-btn next" onclick="slide('news-02',1)">&#8594;</button>
-    </div>
-    <div class="slider-dots" id="dots-news-02"><button class="dot active" onclick="goTo('news-02',0)"></button><button class="dot" onclick="goTo('news-02',1)"></button><button class="dot" onclick="goTo('news-02',2)"></button><button class="dot" onclick="goTo('news-02',3)"></button><button class="dot" onclick="goTo('news-02',4)"></button></div>
-    <p class="slide-caption" id="caption-news-02">Image 1 of 5</p>
-  </div>
-</section>
-<section>
-  <div class="page">
-    <h2 class="sec-title">About the Event</h2>
-    <div class="body-text"><p>I was part of <em>नवसृजन</em> — the Design Innovation Workshop at IIT Jodhpur, jointly organised by Jodhpur City Knowledge and Innovation Foundation (JCKIF), National Institute of Fashion Technology (NIFT) Jodhpur, and Footwear Design and Development Institute (FDDI) Jodhpur.</p>
-     <p>The workshop brought together 100 artisans — 50 from the textile sector and 50 from the leather craft community — who brought their stories, skills, and passion for craft to the sessions.</p>
-     <p>In my session on Market Trends and Consumer Behaviour, we explored how changing consumer preferences, storytelling, and thoughtful presentation can help crafts reach newer markets and broader audiences.</p></div>
-  </div>
-</section>
 <footer>
   <span class="foot-text">Dr. Gaurav Vinodrao Vaidya · IIT Jodhpur</span>
   <a class="foot-link" href="index.html#news">← Back</a>
